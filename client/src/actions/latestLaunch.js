@@ -1,3 +1,22 @@
+export function latestLaunchFetchData(url) {
+  return (dispatch) => {
+    dispatch(latestLaunchIsLoading(true));
+
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw Error(response.statusText)
+        }
+        dispatch(latestLaunchIsLoading(false));
+
+        return response;
+      })
+      .then(response => response.json())
+      .then(latestLaunch => dispatch(latestLaunchFetchDataSuccess(launch)))
+      .catch(() => dispatch(latestLaunchHasErrored(true)))
+  }
+}
+
 export function latestLaunchHasErrored(bool) {
     return {
         type: 'LATEST_LAUNCH_HAS_ERRORED',
