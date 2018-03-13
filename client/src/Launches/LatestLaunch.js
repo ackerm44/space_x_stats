@@ -17,7 +17,7 @@ class LatestLaunch extends Component {
     if (this.props.isLoading) {
       return <p>Loading…</p>;
     }
-    
+
     if (this.props.latestLaunch.length !== 0 ){
       let launchDate = new Date(this.props.latestLaunch.launch_date_utc);
       let monthNames = [
@@ -34,6 +34,7 @@ class LatestLaunch extends Component {
           <h1> Next Launch: {monthNames[month]} {day}, {year}</h1>
           <h3>  {this.props.latestLaunch.rocket.rocket_name}</h3>
           <h3>  {this.props.latestLaunch.launch_site.site_name_long} </h3>
+          <a href={this.props.latestLaunch.links.reddit_campaign} target="_blank">More Information</a>
         </div>
       )
     } else {
