@@ -11,6 +11,20 @@ class Rockets extends Component {
   componentDidMount() {
     this.props.fetchData('/api/rockets')
   }
+
+  render() {
+    // if (this.props.rockets.length !== 0) {
+      return (
+        <div>
+          {this.props.rockets.map(rocket => <p>{rocket.name}</p>)}
+        </div>
+      )
+    // }
+    // return (
+    //   <div>loading </div>
+    // )
+
+  }
 }
 
 const mapStateToProps = state => {

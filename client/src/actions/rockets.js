@@ -4,14 +4,15 @@ export function rocketsFetchData(url) {
 
     fetch(url)
       .then((reponse) => {
-        if (!response.ok) {
-          throw Error(response.statusText)
-        }
+        // if (!response.ok) {
+        //   throw Error(response.statusText)
+        // }
         dispatch(rocketsIsLoading(false));
 
         return reponse;
       })
       .then(response => response.json())
+      // .then(rockets => console.log(rockets))
       .then(rockets => dispatch(rocketsFetchDataSuccess(rockets)))
       .catch(() => dispatch(rocketsHasErrored(true)))
   }
