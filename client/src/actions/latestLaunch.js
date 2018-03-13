@@ -12,7 +12,7 @@ export function latestLaunchFetchData(url) {
         return response;
       })
       .then(response => response.json())
-      .then(latestLaunch => dispatch(latestLaunchFetchDataSuccess(launch)))
+      .then(latestLaunch => dispatch(latestLaunchFetchDataSuccess(latestLaunch)))
       .catch(() => dispatch(latestLaunchHasErrored(true)))
   }
 }

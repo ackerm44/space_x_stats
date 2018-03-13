@@ -1,18 +1,9 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
-import { itemsFetchData } from '../actions/items';
+import { latestLaunchFetchData } from '../actions/latestLaunch';
 
 
 class LatestLaunch extends Component {
-  // constructor(props) {
-  //   super(props)
-  //
-  //   this.state = {
-  //     latestLaunch: [],
-  //     hasErrored: false,
-  //     isLoading: false
-  //   }
-  // }
 
   componentDidMount() {
     this.props.fetchData('https://api.spacexdata.com/v2/launches/latest');
