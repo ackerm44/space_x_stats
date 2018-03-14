@@ -28,7 +28,7 @@ export function pastLaunchesIsLoading(bool) {
   }
 }
 
-export function pastLaunchesFetchDataSuccess(pastLaunchs) {
+export function pastLaunchesFetchDataSuccess(pastLaunches) {
   return {
     type: 'PAST_LAUNCHES_FETCH_DATA_SUCCESS',
     pastLaunches

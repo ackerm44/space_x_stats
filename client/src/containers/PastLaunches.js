@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Launch from '../components/Launch'
+import { pastLaunchesFetchData } from '../actions/pastLaunches'
 
 class PastLaunches extends Component {
   componentDidMount() {
