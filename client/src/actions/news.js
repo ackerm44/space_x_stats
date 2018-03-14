@@ -9,7 +9,7 @@ export function newsFetchData(url) {
         return response
       })
       .then(response => response.json())
-      .then(news => dispatch(newsFetchDataSuccess(news)))
+      .then(news => dispatch(newsFetchDataSuccess(news.articles)))
       .catch(() => dispatch(newsHasErrored(true)))
   }
 }
