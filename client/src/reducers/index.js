@@ -8,5 +8,8 @@ export default combineReducers({
     latestLaunchIsLoading,
     rocketsHasErrored,
     rocketsIsLoading,
-    rockets
+    rockets,
+    launchpadsHasErrored,
+    launchpadsIsLoading,
+    launchpads
 });

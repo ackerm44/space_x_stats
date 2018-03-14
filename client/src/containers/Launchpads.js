@@ -26,7 +26,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchData: (url) => dispatch(launchpadFetchData(url))
+    fetchData: (url) => dispatch(launchpadsFetchData(url))
   }
 
 }
