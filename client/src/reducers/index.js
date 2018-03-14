@@ -3,6 +3,7 @@ import { latestLaunch, latestLaunchHasErrored, latestLaunchIsLoading } from './l
 import { rocketsHasErrored, rocketsIsLoading, rockets} from './rockets'
 import { launchpadsHasErrored, launchpadsIsLoading, launchpads} from './launchpads'
 import { upcomingLaunchesHasErrored, upcomingLaunchesIsLoading, upcomingLaunches} from './upcomingLaunches'
+import { pastLaunchesHasErrored, pastLaunchesIsLoading, pastLaunches} from './pastLaunchs'
 
 export default combineReducers({
     latestLaunch,
@@ -16,5 +17,8 @@ export default combineReducers({
     launchpads,
     upcomingLaunchesHasErrored,
     upcomingLaunchesIsLoading,
-    upcomingLaunches
+    upcomingLaunches,
+    pastLaunchesHasErrored,
+    pastLaunchesIsLoading,
+    pastLaunches
 });
