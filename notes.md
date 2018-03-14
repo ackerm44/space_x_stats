@@ -16,3 +16,4 @@ React Frontend
 5. launchpads info route/container with cards for each launchpad component
 6. stats page that queries db
 7. news api hookup using Thunk
+8.  uuid for keys

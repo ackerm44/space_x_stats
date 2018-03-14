@@ -5,10 +5,6 @@ import Rocket from '../components/Rocket'
 
 
 class Rockets extends Component {
-  state = {
-    rockets: []
-  }
-
   componentDidMount() {
     this.props.fetchData('/api/rockets')
   }

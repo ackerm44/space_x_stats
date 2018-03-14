@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Launchpad from '../components/Launchpad'
-import connect from 'react-redux'
+import { connect } from 'react-redux'
+import { launchpadsFetchData} from '../actions/launchpads'
 
 class Launchpads extends Component {
   componentDidMount() {
@@ -10,7 +11,7 @@ class Launchpads extends Component {
   render() {
     return (
       <div>
-        {this.props.launchpads.map(launchpad => <Launchpad launchpad={launchpad}/>)}
+        {this.props.launchpads.map(launchpad => <Launchpad launchpad={launchpad} />)}
       </div>
     )
   }
