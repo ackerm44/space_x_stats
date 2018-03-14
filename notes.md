@@ -13,7 +13,6 @@ React Frontend
 2. Upcoming flights container/route with cards for each flight component
 3. Past flights container/route with cards for each flight component
 4. rocket info route/container with cards for each rocket component
-5. launchpads info route/container with cards for each launchpad component
 6. stats page that queries db
 7. news api hookup using Thunk
 8.  uuid for keys
