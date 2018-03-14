@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Launchpad from '../components/Launchpad'
 import { connect } from 'react-redux'
-import { launchpadsFetchData} from '../actions/launchpads'
+import { launchpadsFetchData } from '../actions/launchpads'
 
 class Launchpads extends Component {
   componentDidMount() {

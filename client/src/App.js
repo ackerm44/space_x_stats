@@ -4,6 +4,7 @@ import './App.css';
 import LatestLaunch from './Launches/LatestLaunch'
 import Rockets from './containers/Rockets'
 import Launchpads from './containers/Launchpads'
+import UpcomingLaunches from './containers/UpcomingLaunches'
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
           <Route exact path="/" component={LatestLaunch} />
           <Route exact path="/rockets" component={Rockets} />
           <Route exact path="/launchpads" component={Launchpads} />
+          <Route exact path="/upcoming" component={UpcomingLaunches} />
         </div>
       </Router>
     );

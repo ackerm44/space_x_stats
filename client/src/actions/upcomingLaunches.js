@@ -6,7 +6,7 @@ export function upcomingLaunchesFetchData(url) {
       .then((response) => {
         dispatch(upcomingLaunchesIsLoading(false))
 
-        return repsonse;
+        return response;
       })
       .then(response => response.json())
       .then(upcomingLaunches => dispatch(upcomingLaunchesFetchDataSuccess(upcomingLaunches)))

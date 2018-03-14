@@ -16,3 +16,4 @@ React Frontend
 6. stats page that queries db
 7. news api hookup using Thunk
 8.  uuid for keys
+9.  hasErrored and isLoading is not displaying anything for most components (add if statements )

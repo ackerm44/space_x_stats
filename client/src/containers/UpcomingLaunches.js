@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { upcomingLaunchesFetchData } from '../actions/upcomingLaunches'
+import Launch from '../components/Launch'
 
 class UpcomingLaunches extends Component {
   componentDidMount() {
@@ -9,7 +11,7 @@ class UpcomingLaunches extends Component {
   render() {
     return (
       <div>
-        {this.props.upcomingLaunches.map(launch => <Launch launches={this.props.upcomingLaunches})}
+        {this.props.upcomingLaunches.map(launch => <Launch launch={launch} />)}
       </div>
     )
   }
@@ -25,7 +27,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchData: (url) => upcomingLaunchesFetchData(url)
+    fetchData: (url) => dispatch(upcomingLaunchesFetchData(url))
   }
 }
 
