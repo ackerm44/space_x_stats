@@ -4,9 +4,6 @@ export function rocketsFetchData(url) {
 
     fetch(url)
       .then((reponse) => {
-        // if (!response.ok) {
-        //   throw Error(response.statusText)
-        // }
         dispatch(rocketsIsLoading(false));
 
         return reponse;
