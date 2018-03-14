@@ -14,17 +14,11 @@ class Rockets extends Component {
   }
 
   render() {
-    // if (this.props.rockets.length !== 0) {
-      return (
-        <div>
-          {this.props.rockets.map(rocket => <Rocket rocket={rocket} />)}
-        </div>
-      )
-    // }
-    // return (
-    //   <div>loading </div>
-    // )
-
+    return (
+      <div>
+        {this.props.rockets.map(rocket => <Rocket rocket={rocket} />)}
+      </div>
+    )
   }
 }
 
@@ -33,14 +27,14 @@ const mapStateToProps = state => {
     rockets: state.rockets,
     hasErrored: state.rocketsHasErrored,
     isLoading: state.rocketsIsLoading
-  };
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchData: (url) => dispatch(rocketsFetchData(url))
-  };
-};
+  }
+}
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Rockets)

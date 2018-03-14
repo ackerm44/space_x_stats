@@ -1,0 +1,34 @@
+import React, { Component } from 'react';
+import Launchpad from '../components/Launchpad'
+import connect from 'react-redux'
+
+class Launchpads extends Component {
+  componentDidMount() {
+    this.props.fetchData('/api/launchpads')
+  }
+
+  render() {
+    return (
+      <div>
+        {this.props.launchpads.map(launchpad => <Launchpad launchpad={launchpad}/>)}
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    launchpads: state.launchpads,
+    hasErrored: state.launchpadsHasErrored,
+    isLoading: state.launchpadsIsLoading
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchData: (url) => dispatch(launchpadFetchData(url))
+  }
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Launchpads)

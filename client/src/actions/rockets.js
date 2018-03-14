@@ -12,7 +12,6 @@ export function rocketsFetchData(url) {
         return reponse;
       })
       .then(response => response.json())
-      // .then(rockets => console.log(rockets))
       .then(rockets => dispatch(rocketsFetchDataSuccess(rockets)))
       .catch(() => dispatch(rocketsHasErrored(true)))
   }
