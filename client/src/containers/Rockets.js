@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { rocketsFetchData } from '../actions/rockets';
+import Rocket from '../components/Rocket'
 
 
 class Rockets extends Component {
@@ -16,7 +17,7 @@ class Rockets extends Component {
     // if (this.props.rockets.length !== 0) {
       return (
         <div>
-          {this.props.rockets.map(rocket => <p>{rocket.name}</p>)}
+          {this.props.rockets.map(rocket => <Rocket rocket={rocket} />)}
         </div>
       )
     // }

@@ -1,6 +1,7 @@
 TODO:
 
 Rails Backend
+1. Fix seed data for better display
 2. hook up space-x api with faraday to load past launches
 3. hook up to gem whenever to have upcoming launches update on weekly? basis
 4. media model and db for user-sub images??
